@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASE Electrician Agra | Fast • Reliable • Affordable</title>
+<meta name="description" content="ASE Electrician Agra — घर बैठे भरोसेमंद electrician बुक करें। Wiring, lighting, DB/MCB, fan, AC, motor व pump installation और repair services. Call/WhatsApp: +91 7500735720">
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0b0b0c;
+    --black-soft:#151517;
+    --panel:#1c1c1f;
+    --gold:#f5b800;
+    --gold-deep:#d99b00;
+    --white:#f5f5f0;
+    --steel:#9a9da3;
+    --line:#2a2a2e;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(0,0,0,.45);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--white);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand{
+    font-family:'Oswald', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.02em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 20px;}
+  .bolt{color:var(--gold);}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,11,12,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 20px;
+  }
+  .brand-group{display:flex; align-items:center; gap:12px;}
+  .brand-group img{height:48px; width:48px; border-radius:50%; border:2px solid var(--gold);}
+  .brand{font-size:1.05rem; font-weight:600; color:var(--white);}
+  .brand small{display:block; font-family:'Work Sans',sans-serif; text-transform:none; color:var(--gold); font-size:.68rem; letter-spacing:.08em;}
+  .nav-cta{display:flex; gap:10px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 18px; border-radius:999px;
+    font-weight:600; font-size:.85rem;
+    border:1px solid transparent;
+    cursor:pointer; transition:transform .15s ease, box-shadow .15s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-deep)); color:#1a1400; box-shadow:0 6px 18px rgba(245,184,0,.25);}
+  .btn-gold:hover{box-shadow:0 8px 24px rgba(245,184,0,.4);}
+  .btn-ghost{border-color:var(--gold); color:var(--gold);}
+  .btn-ghost:hover{background:rgba(245,184,0,.08);}
+  @media (max-width:640px){ .btn span.label{display:none;} .btn{padding:10px 14px;} }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    padding:64px 0 56px;
+    background:
+      radial-gradient(ellipse 70% 60% at 80% -10%, rgba(245,184,0,.18), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 0% 110%, rgba(245,184,0,.10), transparent 60%),
+      var(--black);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center;}
+  @media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--gold); font-size:.78rem; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase; margin-bottom:18px;
+  }
+  .eyebrow::before{content:"⚡"; font-size:1rem;}
+  .hero h1{
+    font-size:clamp(2.1rem,5vw,3.4rem);
+    line-height:1.05; color:var(--white); margin-bottom:18px;
+  }
+  .hero h1 em{font-style:normal; color:var(--gold);}
+  .hero p.lead{color:var(--steel); font-size:1.05rem; max-width:46ch; margin-bottom:26px;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:30px;}
+  .trust-row{display:flex; flex-wrap:wrap; gap:22px;}
+  .trust-item{display:flex; align-items:center; gap:8px; color:var(--steel); font-size:.85rem;}
+  .trust-item b{color:var(--white); font-family:'Oswald',sans-serif; font-size:1.15rem;}
+  .hero-visual{
+    position:relative; display:flex; justify-content:center;
+  }
+  .hero-visual img{
+    width:min(360px,90%);
+    filter:drop-shadow(0 20px 40px rgba(245,184,0,.15));
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:64px 0;}
+  .section-head{text-align:center; max-width:640px; margin:0 auto 40px;}
+  .section-head .eyebrow{justify-content:center; width:100%;}
+  .section-head h2{font-size:clamp(1.6rem,3.5vw,2.2rem); color:var(--white);}
+  .section-head p{color:var(--steel); margin-top:10px;}
+  .divider{
+    display:flex; align-items:center; gap:10px; justify-content:center;
+    color:var(--gold); margin:8px 0 0; font-size:1.1rem;
+  }
+  .divider::before,.divider::after{content:""; height:1px; width:40px; background:var(--line);}
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:16px;
+  }
+  @media (max-width:860px){ .services-grid{grid-template-columns:repeat(2,1fr);} }
+  .service-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px 16px; text-align:center; transition:transform .18s ease, border-color .18s ease;
+  }
+  .service-card:hover{transform:translateY(-4px); border-color:var(--gold);}
+  .service-card .ic{font-size:1.9rem; margin-bottom:10px;}
+  .service-card h3{font-size:.92rem; color:var(--white); letter-spacing:.02em;}
+
+  /* ---------- Rates (accordion) ---------- */
+  .rate-note{color:var(--steel); text-align:center; max-width:60ch; margin:0 auto 30px; font-size:.9rem;}
+  .accordion{max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:12px;}
+  .acc-item{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .acc-btn{
+    width:100%; display:flex; align-items:center; justify-content:space-between;
+    padding:18px 20px; background:none; border:none; color:var(--white);
+    font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:.03em;
+    font-size:.95rem; cursor:pointer; gap:12px;
+  }
+  .acc-btn .ic{color:var(--gold); font-size:1.2rem;}
+  .acc-btn .chev{margin-left:auto; color:var(--gold); transition:transform .25s ease; font-size:.85rem;}
+  .acc-item.open .chev{transform:rotate(180deg);}
+  .acc-panel{max-height:0; overflow:hidden; transition:max-height .3s ease;}
+  .acc-panel-inner{padding:0 20px 18px;}
+  .rate-line{
+    display:flex; justify-content:space-between; gap:12px;
+    padding:9px 0; border-top:1px dashed var(--line); font-size:.88rem;
+  }
+  .rate-line:first-child{border-top:none;}
+  .rate-line .p{color:var(--steel);}
+  .rate-line .v{color:var(--gold); font-weight:600; white-space:nowrap;}
+  .visiting-charge{
+    text-align:center; margin-top:22px; color:var(--steel); font-size:.85rem;
+  }
+  .visiting-charge b{color:var(--gold);}
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:12px;
+  }
+  @media (max-width:760px){ .gallery-grid{grid-template-columns:repeat(2,1fr);} }
+  .gallery-item{
+    position:relative; border-radius:10px; overflow:hidden; border:1px solid var(--line);
+    aspect-ratio:1/1; cursor:pointer; background:var(--panel);
+  }
+  .gallery-item img{width:100%; height:100%; object-fit:cover; transition:transform .3s ease;}
+  .gallery-item:hover img{transform:scale(1.08);}
+  .gallery-item .cap{
+    position:absolute; left:0; right:0; bottom:0; padding:8px 10px;
+    background:linear-gradient(to top, rgba(0,0,0,.85), transparent);
+    font-size:.72rem; color:var(--white);
+  }
+  .lightbox{
+    position:fixed; inset:0; background:rgba(0,0,0,.92); z-index:100;
+    display:none; align-items:center; justify-content:center; padding:30px;
+  }
+  .lightbox.active{display:flex;}
+  .lightbox img{max-width:90vw; max-height:85vh; border-radius:10px;}
+  .lightbox-close{
+    position:absolute; top:20px; right:24px; color:var(--gold); font-size:2rem;
+    cursor:pointer; line-height:1; background:none; border:none;
+  }
+
+  /* ---------- Testimonials ---------- */
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  @media (max-width:860px){ .testi-grid{grid-template-columns:1fr;} }
+  .testi-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:24px;
+  }
+  .stars{color:var(--gold); letter-spacing:2px; margin-bottom:10px;}
+  .testi-card p{color:var(--steel); font-size:.9rem; margin-bottom:14px;}
+  .testi-name{font-weight:600; color:var(--white); font-size:.88rem;}
+  .testi-note{color:var(--gold); font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; margin-top:2px;}
+
+  /* ---------- Booking ---------- */
+  .book-wrap{
+    display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;
+  }
+  @media (max-width:860px){ .book-wrap{grid-template-columns:1fr;} }
+  .book-info h2{font-size:1.6rem; margin-bottom:14px; color:var(--white);}
+  .book-info p{color:var(--steel); margin-bottom:20px;}
+  .info-line{display:flex; gap:12px; align-items:flex-start; margin-bottom:16px;}
+  .info-line .ic{color:var(--gold); font-size:1.2rem;}
+  .info-line b{display:block; color:var(--white); font-size:.9rem;}
+  .info-line span{color:var(--steel); font-size:.85rem;}
+  .map-embed{
+    margin-top:20px; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);
+  }
+  .map-embed iframe{width:100%; height:200px; border:0; filter:grayscale(.3) invert(.9) contrast(.85);}
+
+  form.card{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:26px; box-shadow:var(--shadow);
+  }
+  .field{margin-bottom:16px;}
+  .field label{display:block; font-size:.78rem; color:var(--steel); margin-bottom:6px; text-transform:uppercase; letter-spacing:.06em;}
+  .field input, .field select, .field textarea{
+    width:100%; padding:12px 14px; background:var(--black-soft); border:1px solid var(--line);
+    border-radius:8px; color:var(--white); font-family:inherit; font-size:.9rem;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none; border-color:var(--gold);
+  }
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  @media (max-width:480px){ .field-row{grid-template-columns:1fr;} }
+  .submit-btn{width:100%; justify-content:center; padding:14px; font-size:.95rem;}
+  .form-note{font-size:.72rem; color:var(--steel); margin-top:10px; text-align:center;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line); padding:40px 0 24px; background:var(--black-soft);
+  }
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:24px;}
+  .foot-brand{display:flex; align-items:center; gap:10px;}
+  .foot-brand img{height:38px; width:38px; border-radius:50%; border:2px solid var(--gold);}
+  .foot-social{display:flex; gap:14px;}
+  .foot-social a{
+    width:38px; height:38px; border-radius:50%; border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-size:1rem;
+    transition:border-color .15s ease, color .15s ease; color:var(--steel);
+  }
+  .foot-social a:hover{border-color:var(--gold); color:var(--gold);}
+  .foot-bottom{
+    text-align:center; color:var(--steel); font-size:.78rem; border-top:1px solid var(--line); padding-top:20px;
+  }
+  .foot-bottom .bolt{color:var(--gold);}
+
+  /* ---------- Floating action buttons ---------- */
+  .fab-group{
+    position:fixed; right:18px; bottom:18px; z-index:60;
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .fab{
+    width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-size:1.4rem; box-shadow:var(--shadow); cursor:pointer;
+  }
+  .fab-call{background:var(--gold); color:#1a1400;}
+  .fab-wa{background:#25D366; color:#0b0b0c;}
+
+  ::selection{background:var(--gold); color:#1a1400;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <div class="brand-group">
+      <img src="assets/logo.png" alt="ASE Electrician Agra Logo">
+      <div class="brand">ASE ELECTRICIAN<small>Agra • Fast • Reliable • Affordable</small></div>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-ghost" href="tel:+917500735720"><span class="ic">📞</span><span class="label">Call</span></a>
+      <a class="btn btn-gold" href="https://wa.me/917500735720" target="_blank" rel="noopener"><span class="ic">💬</span><span class="label">WhatsApp</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Agra • Certified Home Electrician</div>
+      <h1>घर की हर बिजली समस्या का <em>तुरंत</em> और भरोसेमंद समाधान</h1>
+      <p class="lead">Wiring से लेकर AC installation तक — ASE Electrician आपके दरवाज़े पर, तय समय पर, पारदर्शी rates के साथ। Same-day booking उपलब्ध।</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#book"><span class="ic">📅</span> Book Electrician</a>
+        <a class="btn btn-ghost" href="tel:+917500735720"><span class="ic">📞</span> +91 75007 35720</a>
+      </div>
+      <div class="trust-row">
+        <div class="trust-item"><b>8AM–8PM</b> Mon–Sun Available</div>
+        <div class="trust-item"><b>50+</b> Services Covered</div>
+        <div class="trust-item"><b>₹100</b> Only Visiting Charge</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/logo.png" alt="ASE Electrician Logo">
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Our Services</h2>
+      <p>Residential electrical work — installation, repair और maintenance, सब एक जगह।</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="ic">💡</div><h3>Lighting & LED Work</h3></div>
+      <div class="service-card"><div class="ic">🌀</div><h3>Fan Installation</h3></div>
+      <div class="service-card"><div class="ic">⚡</div><h3>House Wiring</h3></div>
+      <div class="service-card"><div class="ic">🔧</div><h3>DB / MCB Work</h3></div>
+      <div class="service-card"><div class="ic">❄️</div><h3>AC Installation</h3></div>
+      <div class="service-card"><div class="ic">💧</div><h3>Motor & Pump Work</h3></div>
+      <div class="service-card"><div class="ic">🔌</div><h3>Repairing Work</h3></div>
+      <div class="service-card"><div class="ic">📹</div><h3>CCTV / Special Work</h3></div>
+    </div>
+  </div>
+</section>
+
+<section id="rates" style="background:var(--black-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Transparent Pricing</div>
+      <h2>Service Rates</h2>
+      <p class="rate-note">नीचे minimum rates दिए गए हैं। Final price काम की स्थिति और मटेरियल के अनुसार बदल सकता है — category खोलकर पूरी list देखें।</p>
+    </div>
+
+    <div class="accordion" id="accordion">
+
+      <div class="acc-item">
+        <button class="acc-btn"><span class="ic">🏠</span> House Wiring <span class="chev">▾</span></button>
+        <div class="acc-panel"><div class="acc-panel-inner">
+          <div class="rate-line"><span class="p">House Wiring 1 BHK (0–600 Sq.Ft.)</span><span class="v">₹8,500</span></div>
+          <div class="rate-line"><span class="p">House Wiring 2 BHK (600–1000 Sq.Ft.)</span><span class="v">₹12,000</span></div>
+          <div class="rate-line"><span class="p">House Wiring 3 BHK (1000–1500 Sq.Ft.)</span><span class="v">₹16,000</span></div>
+          <div class="rate-line"><span class="p">House Wiring 4 BHK (1500–2000 Sq.Ft.)</span><span class="v">₹22,000</span></div>
+          <div class="rate-line"><span class="p">House Wiring 5 BHK या उससे ऊपर</span><span class="v">₹30,000</span></div>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn"><span class="ic">🧱</span> Wall Cutting & Fitting <span class="chev">▾</span></button>
+        <div class="acc-panel"><div class="acc-panel-inner">
+          <div class="rate-line"><span class="p">दीवार काटना</span><span class="v">₹800</span></div>
+          <div class="rate-line"><span class="p">पाइप फिटिंग</span><span class="v">₹600</span></div>
+          <div class="rate-line"><span class="p">कन्सील बॉक्स लगाना</span><span class="v">₹60</span></div>
+          <div class="rate-line"><span class="p">फैन बॉक्स लगाना</span><span class="v">₹90</span></div>
+          <div class="rate-line"><span class="p">जंक्शन बॉक्स लगाना</span><span class="v">₹40</span></div>
+          <div class="rate-line"><span class="p">MCB बॉक्स लगाना</span><span class="v">₹300</span></div>
+          <div class="rate-line"><span class="p">अर्थिंग लगाना</span><span class="v">₹500</span></div>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn"><span class="ic">🔌</span> Points & Sockets <span class="chev">▾</span></button>
+        <div class="acc-panel"><div class="acc-panel-inner">
+          <div class="rate-line"><span class="p">लाइट पॉइंट</span><span class="v">₹150</span></div>
+          <div class="rate-line"><span class="p">फैन पॉइंट</span><span class="v">₹200</span></div>
+          <div class="rate-line"><span class="p">पावर सॉकेट 6A/16A</span><span class="v">₹250</span></div>
+          <div class="rate-line"><span class="p">AC पॉइंट</span><span class="v">₹300</span></div>
+          <div class="rate-line"><span class="p">गीजर पॉइंट</span><span class="v">₹300</span></div>
+          <div class="rate-line"><span class="p">फ्रिज पॉइंट</span><span class="v">₹250</span></div>
+          <div class="rate-line"><span class="p">वॉशिंग मशीन पॉइंट</span><span class="v">₹250</span></div>
+          <div class="rate-line"><span class="p">मोटर/पंप पॉइंट</span><span class="v">₹500</span></div>
+          <div class="rate-line"><span class="p">एक्जॉस्ट पॉइंट (वायरिंग सहित)</span><span class="v">₹120</span></div>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn"><span class="ic">🛠️</span> Installation Work <span class="chev">▾</span></button>
+        <div class="acc-panel"><div class="acc-panel-inner">
+          <div class="rate-line"><span class="p">सीलिंग फैन लगाना</span><span class="v">₹250</span></div>
+          <div class="rate-line"><span class="p">एग्जॉस्ट फैन लगाना</span><span class="v">₹300</span></div>
+          <div class="rate-line"><span class="p">चिमनी इंस्टॉल करना</span><span class="v">₹400</span></div>
+          <div class="rate-line"><span class="p">वॉशिंग मशीन इंस्टॉल</span><span class="v">₹300</span></div>
+          <div class="rate-line"><span class="p">वॉटर प्यूरिफायर इंस्टॉल</span><span class="v">₹300</span></div>
+          <div class="rate-line"><span class="p">गीजर इंस्टॉल</span><span class="v">₹400</span></div>
+          <div class="rate-line"><span class="p">AC इंस्टॉल (1 Ton)</span><span class="v">₹800</span></div>
+          <div class="rate-line"><span class="p">AC इंस्टॉल (1.5 Ton)</span><span class="v">₹1,000</span></div>
+          <div class="rate-line"><span class="p">TV वॉल माउंट लगाना</span><span class="v">₹300</span></div>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn"><span class="ic">🔧</span> Repair Work <span class="chev">▾</span></button>
+        <div class="acc-panel"><div class="acc-panel-inner">
+          <div class="rate-line"><span class="p">शॉर्ट सर्किट चेकिंग</span><span class="v">₹300</span></div>
+          <div class="rate-line"><span class="p">MCB बदलना</span><span class="v">₹150</span></div>
+          <div class="rate-line"><span class="p">स्विच/सॉकेट बदलना</span><span class="v">₹50</span></div>
+          <div class="rate-line"><span class="p">होल्डर/प्लेट बदलना</span><span class="v">₹30</span></div>
+          <div class="rate-line"><span class="p">पंखा/किट आर्मेचर बदलना</span><span class="v">₹100</span></div>
+          <div class="rate-line"><span class="p">तार जोड़ना (प्रति जॉइंट)</span><span class="v">₹30</span></div>
+          <div class="rate-line"><span class="p">DB/MCB बॉक्स रिपेयर</span><span class="v">₹300</span></div>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn"><span class="ic">💧</span> Motor & Pump <span class="chev">▾</span></button>
+        <div class="acc-panel"><div class="acc-panel-inner">
+          <div class="rate-line"><span class="p">मोनोब्लॉक पंप (0.5 HP)</span><span class="v">₹800</span></div>
+          <div class="rate-line"><span class="p">मोनोब्लॉक पंप (1 HP)</span><span class="v">₹1,000</span></div>
+          <div class="rate-line"><span class="p">सबमर्सिबल पंप (0.5 HP)</span><span class="v">₹1,000</span></div>
+          <div class="rate-line"><span class="p">सबमर्सिबल पंप (1 HP)</span><span class="v">₹1,200</span></div>
+          <div class="rate-line"><span class="p">मोटर वाइंडिंग (0.5 HP)</span><span class="v">₹1,000</span></div>
+          <div class="rate-line"><span class="p">मोटर वाइंडिंग (1 HP)</span><span class="v">₹1,500</span></div>
+          <div class="rate-line"><span class="p">मोटर वाइंडिंग (2 HP)</span><span class="v">₹2,000</span></div>
+          <div class="rate-line"><span class="p">मोटर वाइंडिंग (3 HP)</span><span class="v">₹3,000</span></div>
+          <div class="rate-line"><span class="p">मोटर वाइंडिंग (5 HP)</span><span class="v">₹4,500</span></div>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn"><span class="ic">⚡</span> Power & Earthing <span class="chev">▾</span></button>
+        <div class="acc-panel"><div class="acc-panel-inner">
+          <div class="rate-line"><span class="p">अर्थिंग पाइप (प्रति पॉइंट)</span><span class="v">₹500</span></div>
+          <div class="rate-line"><span class="p">इन्वर्टर कनेक्शन</span><span class="v">₹600</span></div>
+          <div class="rate-line"><span class="p">स्टेबलाइजर कनेक्शन</span><span class="v">₹600</span></div>
+          <div class="rate-line"><span class="p">सोलर सिस्टम कनेक्शन</span><span class="v">₹1,500</span></div>
+        </div></div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn"><span class="ic">📹</span> CCTV & Special Work <span class="chev">▾</span></button>
+        <div class="acc-panel"><div class="acc-panel-inner">
+          <div class="rate-line"><span class="p">CCTV कैमरा इंस्टॉल (प्रति कैमरा)</span><span class="v">₹500</span></div>
+          <div class="rate-line"><span class="p">डोर बेल/वीडियो डोर फोन</span><span class="v">₹400</span></div>
+        </div></div>
+      </div>
+
+    </div>
+
+    <div class="visiting-charge">Visiting Charge: <b>₹100</b> (काम कन्फर्म होने पर adjust)</div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Recent Work</div>
+      <h2>Our Work Gallery</h2>
+      <p>देखें हमारे किए गए कुछ हाल के projects।</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-caption="LED ceiling & fan work"><img src="assets/1912.jpg" alt="LED ceiling & fan work" loading="lazy"><div class="cap">LED ceiling & fan work</div></div>
+      <div class="gallery-item" data-caption="Ceiling lighting work"><img src="assets/1643.jpg" alt="Ceiling lighting work" loading="lazy"><div class="cap">Ceiling lighting work</div></div>
+      <div class="gallery-item" data-caption="Ceiling LED work"><img src="assets/1639.jpg" alt="Ceiling LED work" loading="lazy"><div class="cap">Ceiling LED work</div></div>
+      <div class="gallery-item" data-caption="LED strip ceiling work"><img src="assets/1633.jpg" alt="LED strip ceiling work" loading="lazy"><div class="cap">LED strip ceiling work</div></div>
+      <div class="gallery-item" data-caption="Decorative LED lighting"><img src="assets/1628.jpg" alt="Decorative LED lighting" loading="lazy"><div class="cap">Decorative LED lighting</div></div>
+      <div class="gallery-item" data-caption="Modern ceiling lighting"><img src="assets/1636.jpg" alt="Modern ceiling lighting" loading="lazy"><div class="cap">Modern ceiling lighting</div></div>
+      <div class="gallery-item" data-caption="DB / MCB panel work"><img src="assets/1590.jpg" alt="DB / MCB panel work" loading="lazy"><div class="cap">DB / MCB panel work</div></div>
+      <div class="gallery-item" data-caption="Electrical distribution panel"><img src="assets/1388.png" alt="Electrical distribution panel" loading="lazy"><div class="cap">Electrical distribution panel</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<section id="testimonials" style="background:var(--black-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Customer Feedback</div>
+      <h2>Reviews (Sample)</h2>
+      <p style="font-size:.8rem;">यह placeholder reviews हैं — असली customer feedback आने पर इन्हें replace कर दें।</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>“समय पर आए और वायरिंग का काम बहुत साफ-सुथरा किया। Price भी पहले ही बता दिया था।”</p>
+        <div class="testi-name">Rohit Sharma</div>
+        <div class="testi-note">House Wiring • Agra</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>“AC installation same day हो गई, बिना extra charge के। Highly recommended।”</p>
+        <div class="testi-name">Priya Gupta</div>
+        <div class="testi-note">AC Installation • Agra</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★☆</div>
+        <p>“Short circuit की problem एक ही visit में ठीक हो गई। अच्छी service।”</p>
+        <div class="testi-name">Amit Verma</div>
+        <div class="testi-note">Repair Work • Agra</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap book-wrap">
+    <div class="book-info">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Book Your Electrician</h2>
+      <p>Form भरें — आपकी details WhatsApp पर सीधे हमें भेज दी जाएंगी, हम जल्द confirm करेंगे।</p>
+
+      <div class="info-line"><span class="ic">📞</span><div><b>Call / WhatsApp</b><span>+91 75007 35720</span></div></div>
+      <div class="info-line"><span class="ic">⏰</span><div><b>Working Hours</b><span>Mon–Sun, 8:00 AM – 8:00 PM</span></div></div>
+      <div class="info-line"><span class="ic">📍</span><div><b>Service Area</b><span>Agra & surrounding areas</span></div></div>
+
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps?q=Agra&output=embed" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <form class="card" id="bookingForm">
+      <div class="field">
+        <label for="name">आपका नाम</label>
+        <input type="text" id="name" name="name" placeholder="पूरा नाम" required>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="10-digit mobile" required>
+        </div>
+        <div class="field">
+          <label for="time">Preferred Time</label>
+          <input type="text" id="time" name="time" placeholder="जैसे: आज शाम 5 बजे">
+        </div>
+      </div>
+      <div class="field">
+        <label for="service">Service चाहिए</label>
+        <select id="service" name="service">
+          <option>House Wiring</option>
+          <option>Lighting / LED Work</option>
+          <option>Fan Installation</option>
+          <option>DB / MCB Work</option>
+          <option>AC Installation</option>
+          <option>Motor / Pump Work</option>
+          <option>Repair Work</option>
+          <option>CCTV / Special Work</option>
+          <option>अन्य (Other)</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="address">पूरा पता</label>
+        <textarea id="address" name="address" rows="3" placeholder="मकान नंबर, गली, इलाका, Agra" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold submit-btn">📅 Send Booking Request via WhatsApp</button>
+      <div class="form-note">Submit करते ही WhatsApp खुलेगा — आपकी details prefilled होंगी, बस भेज दें।</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="ASE Electrician Logo">
+        <div class="brand" style="font-size:.95rem;">ASE ELECTRICIAN<br><small style="text-transform:none; color:var(--gold); font-size:.68rem;">Agra • Safe Work • Best Quality • 24×7</small></div>
+      </div>
+      <div class="foot-social">
+        <a href="tel:+917500735720" title="Call">📞</a>
+        <a href="https://wa.me/917500735720" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+        <a href="#" title="Instagram">📷</a>
+        <a href="#" title="Facebook">📘</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="bolt">⚡</span> ASE Electrician • Safe Work • Best Quality • 24×7 Service &nbsp;|&nbsp; © 2026 ASE Electrician, Agra
+    </div>
+  </div>
+</footer>
+
+<div class="fab-group">
+  <a class="fab fab-call" href="tel:+917500735720" title="Call Now">📞</a>
+  <a class="fab fab-wa" href="https://wa.me/917500735720" target="_blank" rel="noopener" title="WhatsApp">💬</a>
+</div>
+
+<script>
+  // Accordion
+  document.querySelectorAll('.acc-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const item = btn.parentElement;
+      const panel = item.querySelector('.acc-panel');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.acc-item.open').forEach(el=>{
+        el.classList.remove('open');
+        el.querySelector('.acc-panel').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Hide gallery items whose image is missing (until real photos are added)
+  document.querySelectorAll('.gallery-item img').forEach(img=>{
+    img.addEventListener('error', ()=>{ img.closest('.gallery-item').style.display = 'none'; });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('.gallery-item').forEach(item=>{
+    item.addEventListener('click', ()=>{
+      const src = item.querySelector('img').getAttribute('src');
+      lightboxImg.setAttribute('src', src);
+      lightbox.classList.add('active');
+    });
+  });
+  document.getElementById('lightboxClose').addEventListener('click', ()=> lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) lightbox.classList.remove('active'); });
+
+  // Booking form -> WhatsApp
+  document.getElementById('bookingForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const time = document.getElementById('time').value.trim();
+    const service = document.getElementById('service').value;
+    const address = document.getElementById('address').value.trim();
+
+    const msg = `नमस्ते ASE Electrician,%0A%0Aमुझे एक electrician की ज़रूरत है:%0A👤 नाम: ${name}%0A📞 फ़ोन: ${phone}%0A🛠️ Service: ${service}%0A📍 पता: ${address}%0A⏰ पसंदीदा समय: ${time || 'जल्द से जल्द'}`;
+    window.open(`https://wa.me/917500735720?text=${msg}`, '_blank');
+  });
+</script>
+
+</body>
+</html>
